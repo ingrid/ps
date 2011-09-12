@@ -70,7 +70,6 @@ ps_tick = function(){
         ps_timer(30);
     }
     else{
-        console.log("Tick called.");
 	    var t;
 	    
 	    t = score[tix];

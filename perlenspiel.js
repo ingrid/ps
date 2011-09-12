@@ -152,7 +152,6 @@ ps_setup = function(width, height){
             }
         }
         if (ps.timer.inc !== 0){
-            console.log("Time: " + ps.timer.time);
             if (ps.timer.time >= ps.timer.inc){
                 ps.timer.time = 0;
                 ps_tick();
@@ -164,7 +163,6 @@ ps_setup = function(width, height){
 
     ps_timer = function(inc){
         ps.timer.inc = inc;
-        console.log("TIMER CALLED.");
     }
     
     ps.render = function(){

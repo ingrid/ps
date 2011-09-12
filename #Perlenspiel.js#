@@ -73,7 +73,7 @@ ps_setup = function(width, height){
     ps.canvas.height = Math.floor(window.innerHeight);
     ps.message = {};
     
-    ps.message.x;
+ Å¥   ps.message.x;
     ps.message.y;
     ps.message.width;
     ps.message.height;
@@ -164,7 +164,7 @@ ps_setup = function(width, height){
 
     ps_timer = function(inc){
         ps.timer.inc = inc;
-
+        console.log("TIMER CALLED.");
     }
     
     ps.render = function(){
