@@ -21,14 +21,14 @@ var makeNote = function(note, x, y, color){
 	return self;
 }
 
-score[01] = makeNote("L_HChord_D4", 0, 5, MY_BLUE);
-score[03] = makeNote("L_HChord_A4", 1, 0, MY_YELLOW);
-score[05] = makeNote("L_HChord_F4", 2, 2, MY_ORANGE);
-score[07] = makeNote("L_XHChord_D4", 3, 5, MY_BLUE);
-score[09] = makeNote("L_HChord_Db4", 4, 6, MY_PURPLE);
-score[11] = makeNote("HChord_D4", 5, 5, MY_BLUE);
-score[12] = makeNote("HChord_E4", 6, 3, MY_GREEN);
-score[13] = makeNote("L_HChord_F4", 7, 2, MY_ORANGE);
+score[01] = makeNote("L_Hchord_D4", 0, 5, MY_BLUE);
+score[03] = makeNote("L_Hchord_A4", 1, 0, MY_YELLOW);
+score[05] = makeNote("L_Hchord_F4", 2, 2, MY_ORANGE);
+score[07] = makeNote("L_Hchord_D4", 3, 5, MY_BLUE);
+score[09] = makeNote("L_Hchord_Db4", 4, 6, MY_PURPLE);
+score[11] = makeNote("Hchord_D4", 5, 5, MY_BLUE);
+score[12] = makeNote("Hchord_E4", 6, 3, MY_GREEN);
+score[13] = makeNote("L_Hchord_F4", 7, 2, MY_ORANGE);
 
 var tix = 0;
 
@@ -36,11 +36,12 @@ ps_init = function(){
 	ps_setup(PS_GRID_X, PS_GRID_Y);
 	ps_message("P  E  R  L  E  N  S  P  I  E  L");
 
-    ps_load("L_HChord_D4");
-    ps_load("L_HChord_A4");
-    ps_load("L_HChord_F4");
-    ps_load("L_HChord_Db4");
-    ps_load("L_HChord_E4");
+    ps_load("L_Hchord_D4");
+    ps_load("L_Hchord_A4");
+    ps_load("L_Hchord_F4");
+    ps_load("L_Hchord_Db4");
+	ps_load("Hchord_F4");
+    ps_load("Hchord_E4");
 
     ps_timer(60);
 };
