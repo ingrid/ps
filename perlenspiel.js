@@ -127,10 +127,10 @@ ps_setup = function(width, height){
         ps.message.width = ps.box.width;
         ps.status.width = ps.box.width;
         
-        ps.message.x = ps.box.x;
+        ps.message.x = ps.canvas.width / 2;
         ps.message.y = ps.box.y - (ps.box.y - ps.message.height);
         
-        ps.status.x = ps.box.x;
+        ps.status.x = ps.canvas.width / 2;
         ps.status.y = (ps.y * ps.edge) + ((ps.y - 1) * ps.gridLines) + (2 * ps.border) + ps.message.height + ps.box.height;
     };
     
@@ -191,7 +191,8 @@ ps_setup = function(width, height){
 
         // Paint message, if any.
         ctx.font = ps.font.style + " " + ps.font.size + " " + ps.font.font;
-        ctx.fillStyle = ps.message.font.color;
+        ctx.textAlign = "center";
+	ctx.fillStyle = ps.message.font.color;
         ctx.fillText(ps.message.text, ps.message.x, ps.message.y);
         
         ctx.font = ("32pt sans-serif");

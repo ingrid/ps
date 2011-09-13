@@ -221,24 +221,24 @@ ps_setup = function(width, height){
     ps.sound.cache = {};
     ps.sound.load = function(url){
         var aud = document.createElement('audio');
-        aud.setAttribute('src', url);
+        aud.setAttribute('src', "audio/" +  url + ".wav");
         aud.load();
         ps.sound.cache[url] = aud;
     };
     ps.sound.play = function(url){
-        if(ps.sound.cache[url] === undefined){
+        if(ps.sound.cache["audio/" + url + ".wav"] === undefined){
             ps.sound.load(url);
         }
         ps.sound.cache[url].play();
     };
     
     ps_play = function(file, volume, pan, loop){
-        ps.sound.play("audio/" + file + ".wav");
+        ps.sound.play(file);
     };
 
     ps_load = function(url){
         var aud = document.createElement('audio');
-        aud.setAttribute('src', url);
+        aud.setAttribute('src', "audio/" + url + ".wav");
         aud.load();
         ps.sound.cache[url] = aud;
     };
